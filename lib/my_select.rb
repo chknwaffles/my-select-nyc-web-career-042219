@@ -3,7 +3,8 @@ def my_select(collection)
  i = 0
  res = []
  while i < collection.size
-  res.push(yield(collection[i]))
+  yield(collection[i])
+  res(collection[i])
   i += 1
  end
  res
