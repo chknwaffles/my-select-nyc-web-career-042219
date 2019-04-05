@@ -3,8 +3,12 @@ def my_select(collection)
  i = 0
  res = []
  while i < collection.size
-  yield(collection[i])
-  res << collection[i]
+  flag = yield(collection[i])
+  
+  if flag == true
+    res << collection[i]
+  end
+  
   i += 1
  end
  res
